@@ -5,6 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-<p th:text="${post.autor}"></p>
+<table>
+    <a th:href="@{/formCadastro}">Novos Cadastros</a>
+    <tr th:each="post : ${posts}" th:object="${post}">
+        <td th:text="*{id}"></td>
+        <td th:text="*{autor}"></td>
+        <td th:text="*{mensagem}"></td>
+        <td><a th:href="@{'formEditar/'+*{id}}">Editar</a></td>
+    </tr>
+</table>
 </body>
 </html>

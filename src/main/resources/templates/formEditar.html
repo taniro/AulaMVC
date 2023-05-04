@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edição de Posts</title>
+</head>
+<body>
+<h1>Edição de Posts</h1>
+<form th:object="${postagem}" method="post" th:action="@{/salvarEdit}">
+  <table>
+    <tr>
+      <td><label for="id">Id</label> </td>
+      <td><input type="text" th:field="*{id}" id="id" readonly></td>
+    </tr>
+    <tr>
+      <td><label for="mensagem">Mensagem</label> </td>
+      <td><input type="text" th:field="*{mensagem}" id="mensagem"></td>
+    </tr>
+    <tr>
+      <td><label for="autor">Autor</label> </td>
+      <td><input type="text" th:field="*{autor}" id="autor"></td>
+    </tr>
+    <tr>
+      <td><button type="submit">Enviar</button> </td>
+      <td><button type="reset">Limpar</button> </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

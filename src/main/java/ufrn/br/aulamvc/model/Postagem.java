@@ -1,14 +1,20 @@
 package ufrn.br.aulamvc.model;
 
-public class Post {
+public class Postagem {
     Integer id;
     String mensagem;
     String autor;
 
-    public Post() {
+    public Postagem() {
     }
 
-    public Post(String mensagem, String autor) {
+    public Postagem(Integer id, String mensagem, String autor) {
+        this.id = id;
+        this.mensagem = mensagem;
+        this.autor = autor;
+    }
+
+    public Postagem(String mensagem, String autor) {
         this.mensagem = mensagem;
         this.autor = autor;
     }
